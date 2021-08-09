@@ -8,7 +8,10 @@ window.addEventListener ("load", function() {
       const url = 'http://localhost:22567/?cmd=' + encodeURIComponent(e.getAttribute('value'))
       console.log(`Launching ${url}...`)
       fetch(url, {
+        referrerPolicy: "origin",
         mode: 'no-cors'
+      }).then(() => {
+        alert("Install queued")
       })
     })
   })
