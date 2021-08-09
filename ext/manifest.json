@@ -1,0 +1,15 @@
+{
+  "name": "Chocolatey Quick Installer Helper",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Install chocolatey community packages directly from chrome.",
+  "content_scripts": [
+    {
+      "matches": ["https://community.chocolatey.org/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "icons": {
+    "128": "icon-128.png"
+  }
+}
