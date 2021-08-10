@@ -12,6 +12,11 @@ window.addEventListener ("load", function() {
         mode: 'no-cors'
       }).then(() => {
         alert("Install queued")
+      }).catch(e => {
+        if (e instanceof TypeError) {
+          alert("Cannot connect to cqinst daemon. Try installing cqinst.exe")
+          window.open('https://github.com/phu54321/cqinst/wiki/Installation')
+        }
       })
     })
   })
